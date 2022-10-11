@@ -8,19 +8,17 @@ import com.beginus.beginners219.response.StatusCode;
 import com.beginus.beginners219.service.BusinessService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import lombok.RequiredArgsConstructor;
 
 
 @RequiredArgsConstructor
 @RestController
+@RequestMapping("/business")
 public class BusinessController {
     private final BusinessService businessService;
 
-    @GetMapping("/test")
+    @GetMapping
     @ResponseBody
     public ResponseEntity getBusinessList() {
 
